@@ -1,7 +1,5 @@
  pipeline {
-  agent {
-    label 'app'
-  }
+  agent any
     
   stages {
     stage('Git Checkout') {
