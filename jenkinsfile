@@ -1,4 +1,4 @@
- pipelineagent {
+ pipeline {
    agent{
      label 'app-host'
    } 
