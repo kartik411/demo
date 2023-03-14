@@ -13,6 +13,7 @@
      stage('Deploying App host'){
        parameters{
          sting(name: 'BUILD_NUMBER', defaultValue: '')
+       }
        steps {
          def buildNumber = BUILD_NUMBER ?
          // sh 'sudo docker ps'
