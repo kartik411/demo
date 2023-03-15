@@ -13,7 +13,7 @@
      stage('Deploying App host'){
        environment{
          BUILD_NUMBER = "$env.BUILD_NUMBER"
-         PREV_BUILD_NUMBER = "${$BUILD_NUMBER -1}
+         PREV_BUILD_NUMBER = "${$BUILD_NUMBER -1}"
        }
        steps {
          sh 'sudo docker stop apphost || true && sudo docker rm apphost || true'
