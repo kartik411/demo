@@ -16,6 +16,7 @@
        }
        steps {
          sh 'sudo docker stop apphost || true && sudo docker rm apphost || true'
+         sh 'aws ecr get-login-password --region ap-northeast-1 | sudo docker login --username AWS --password-stdin 357734901335.dkr.ecr.ap-northeast-1.amazonaws.com'
          sh 'sudo docker run -itd --name apphost -p 8080:8081 357734901335.dkr.ecr.ap-northeast-1.amazonaws.com/app:${BUILD_NUMBER}'
        }
      }
